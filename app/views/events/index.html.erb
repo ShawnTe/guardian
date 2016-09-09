@@ -1,10 +1,10 @@
 <div id="top-bar">
+  Events
 </div>
 
 <div id="main-content">
   <div>
-    <h1>All my events</h1>
-    <ul>
+    <ul class=lists>
       <% @events.each do |event| %>
       <% date = event.created_at %>
       <% formatted_date = date.strftime("%a %B %d") %>

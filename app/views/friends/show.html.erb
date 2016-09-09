@@ -1,0 +1,19 @@
+<div id="top-bar">
+  Friends
+</div>
+
+<div id="main-content">
+  <div id=info>
+    <p><%= @friend.first_name + @friend.last_name %></p>
+    <p><%= @friend.email %></p>
+    <p><%= @friend.phone_number %></p>
+  </div>
+</div>
+
+<div id="bottom-bar">
+  <div class=bottom-menu>
+    <%= link_to "Edit", edit_friend_path %>
+    <div class=bottom-separator></div>
+    <%= link_to "Delete", friend_path(@friend), method: :delete %>
+  </div>
+</div>

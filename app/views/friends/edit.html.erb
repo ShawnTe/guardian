@@ -1,0 +1,57 @@
+<div id="top-bar">
+</div>
+
+<div id="main-content">
+  <h1>Editing friend</h1>
+
+  <%= form_for :friend, url: friend_path(@friend), method: :put do |f| %>
+
+  <% if @friend.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@friend.errors.count, "error") %> prevented
+      this friend from being saved:
+    </h2>
+    <ul>
+      <% @friend.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div>
+    <%= form_for :friend do |f| %>
+      <div class="field">
+        <%= f.label :first_name, 'First Name' %><br />
+        <%= f.text_field :first_name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name, 'Last Name' %><br />
+        <%= f.text_field :last_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :phone_number, 'Phone number' %><br />
+        <%= f.text_field :phone_number %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+        <div class="actions">
+          <%= f.submit "Save changes" %>
+        </div>
+
+    <% end %>
+  </div>
+  <% end %>
+
+  <%= link_to 'Back', friends_path %>
+</div>
+
+<div id="bottom-bar">
+</div>

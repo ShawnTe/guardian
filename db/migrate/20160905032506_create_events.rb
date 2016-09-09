@@ -6,7 +6,6 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :place_id, foreign_key: false
       t.references :drone, foreign_key: true
       t.references :user, foreign_key: true
-      t.references :friend, foreign_key: true
 
       t.timestamps
     end

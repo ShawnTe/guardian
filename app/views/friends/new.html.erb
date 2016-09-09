@@ -1,0 +1,33 @@
+<div id="top-bar">
+  Add friend
+</div>
+
+<div id="main-content">
+  <%= form_for :friend, url: '/friends', method: :post do |f| %>
+  <div class="field">
+    <%= f.label :first_name, 'First Name' %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name, 'Last Name' %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number, 'Phone number' %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+</div>
+
+<div id="bottom-bar">
+  <div class=bottom-menu>
+    <div class="actions">
+      <%= f.submit "Add friend" %>
+    </div>
+  </div>
+</div>
+
+  <% end %>

@@ -1,9 +1,438 @@
+/* Create variables for common formatting */
+:root {
+  --color-background-landing: #312F2F;
+  --color-background-top-bar: #EEEEEE;
+  --color-background-bottom-bar: #34495e;
+  --color-background-button: #EEEEEE;
+  --color-background-button-walk: #e67e22;
+  --color-background-main: #ecf0f1;
+  --color-background-connected: #2ecc71;
+  --color-background-walk: #bdc3c7;
+  --color-background-safe: #3498db;
+  --color-text-light: #FEFFFE;
+  --color-text-dark: #312F2F;
+  --color-borders: #CCCCCC;
+  font-family: 'Futura', sans-serif;
+}
+
+/***********************************************/
+/************* Set page defaults ***************/
+/***********************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 1.2em;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
 body {
-  font-family: Futura;
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol, ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+/***********************************************/
+/************* End page defaults ***************/
+/***********************************************/
+
+/* Custom CSS Start */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-background-main);
+}
+
+#top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--color-background-bottom-bar);
+  font-size: 3em;
+  color: var(--color-text-light);
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+}
+
+#main-content #no-bottom {
+  height: 90vh;
+}
+
+#main-content #no-top {
+  height: 90vh;
+}
+
+#bottom-bar {
+  width: 100vw;
+  height: 10vh;
+}
+
+.centered-flex-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  font-size: 3em;
+}
+
+.login-link {
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background-button);
+  color: white;
+  border-radius: 3px;
+}
+
+#form-div {
+  display: flex;
+  justify-content: left;
+  align-items: center
+}
+
+em {
+  display: none;
+}
+
+.text-input {
+
+}
+
+.field {
+  display: flex;
+  width: 90vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+
+.field input {
+  display: inline-block;
+  width: 60vw;
+  height: 5vh;
+  font-size: 1em;
+  border: 1px var(--color-text-dark) solid;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+#devise-wrapper1 {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#devise-wrapper1 a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+#form-submit {
+  background-color: var(--color-background-bottom-bar);
+}
+
+.lists {
+  list-style-type: none;
+}
+
+.lists li {
+
+}
+
+.lists a {
+  display: flex;
+  align-items: center;
+  border: 1px var(--color-borders) solid;
+  width: 90vw;
+  height: 10vh;
+  padding-left: 10vw;
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+.lists a:hover {
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+.lists a:clicked {
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  font-size: 1.6em;
+  flex-direction: column;
+}
+
+#info p {
+  display: block;
+  height: 6vh;
+}
+#video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 35vh;
+  border-bottom: 1px var(--color-text-light) solid;
+  background-color: var(--color-background-landing);
+  color: var(--color-text-light);
+}
+
+#map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 35vh;
+  background-color: var(--color-background-landing);
+  color: var(--color-text-light);
+}
+
+.bottom-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-bottom-bar);
+}
+
+.bottom-menu a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 49vw;
+  height: 10vh;
+  text-decoration: none;
+  color: var(--color-text-light);
+}
+
+.bottom-menu form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 49vw;
+  height: 10vh;
+  text-decoration: none;
+  color: var(--color-text-light);
+  border: none;
+}
+
+.bottom-menu input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 1em;
+}
+
+.bottom-separator {
+  background-color: var(--color-text-light);
+  display: inline-flex;
+  width: 2px;
+  height: 10vh;
+}
+
+#event-info {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+  padding-left: 10vw;
+  align-items: center;
+}
+
+#event-vid {
+  height: 30vh;
+  width: 100vw;
+  display: block;
+}
+
+#event-map{
+  height: 30vh;
+  width: 100vw;
+  display: block;
+}
+
+#hidden-div {
+  display: none;
+}
+#shown-div {
+  display: flex;
+}
+
+.walk-me-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50vw;
+  background-color: var(--color-background-button-walk);
+  color: var(--color-text-light);
+  font-size: 2em;
+}
+
+.controls {
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+#pac-input {
+  display: block;
+  width: 80vw;
+  height: 6vh;
+  font-size: 1.2em;
+  text-overflow: ellipsis;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-item {
+  font-size: 1.2em;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+}
+
+.pac-item-query {
+  font-size: 1em;
+}
+
+.pac-matched {
+  font-size: 1em;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+  font-size: 40px;
+}
+
+#type-selector label {
+}
+
+.help-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  font-size: 1em;
+  color: var(--color-text-light);
+}
+
+#help-not-connected {
+  background-color: var(--color-text-dark);
+}
+
+#help-connected {
+  background-color: var(--color-background-connected);
+}
+
+#walk-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 45vh;
+  color: var(--color-text-light);
+  background-color: var(--color-background-walk);
+  font-size: 2em;
 }
 
 #home-safely {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 45vh;
+  color: var(--color-text-light);
+  background-color: var(--color-background-safe);
+  font-size: 2em;
 }
 
 #show-events {

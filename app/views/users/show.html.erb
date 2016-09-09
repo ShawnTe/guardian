@@ -1,21 +1,128 @@
 <div id="top-bar">
+  Guardian
 </div>
 
 <div id="main-content">
-  <div id="walk-me-home">
-      <%= link_to image_tag("walk-me-home-btn.png"), remote: true  %>
-  </div>
-  <div id="location-search">
-    placeholder for location bar
+  <div class=location-input id=hidden-div>
+    <div id="search-bar">
+      <input id="pac-input" class="controls" type="text" placeholder="Enter your location">
+    </div>
   </div>
 
-  <div id="walk-button">
-    placeholder for button to hit to keep walking
-  </div>
-  <div id="home-safely">
-    <%= link_to image_tag("i-am-home.png") %>
+  <div id=hidden-div class=walk-me-home>
+    Walk me home
   </div>
 </div>
 
 <div id="bottom-bar">
+  <div class=bottom-menu>
+    <%= link_to "Friends", friends_path %>
+    <div class=bottom-separator></div>
+    <%= link_to "Events", events_path %>
+  </div>
 </div>
+
+<!--     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      #target {
+        width: 345px;
+      }
+    </style> -->
+
+
+    <script>
+      function initAutocomplete() {
+        var input = document.getElementById('pac-input');
+
+        var searchBox = new google.maps.places.SearchBox(input);
+
+        var markers = [];
+
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+          if (places.length == 0) {
+            return;
+          }
+
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            $.ajax({
+              url: "/events",
+              method: "POST",
+              data: { place_id: place.formatted_address }
+            })
+            .done(function(serverResponse){
+              console.log(serverResponse)
+              console.log(" -- This is the event-created server response");
+
+              $('#pac-input').hide()
+              $('.location-input').removeAttr('id')
+              // $('.walk-me-home').removeAttr('id')
+              $('.location-input').attr('id', 'hidden-div')
+              // $('.walk-me-home').attr('id', 'shown-div')
+              window.location.href = "/events/" + serverResponse.event_id + "/drones/" + serverResponse.drone_id;
+            })
+            .fail(function(serverResponse){
+              console.log(serverResponse)
+              console.log("New event creation failed")
+
+            })
+
+          });
+        });
+
+      }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy-vo2nS3tMm9kiAE3GXSt8bU3VFOm-c4&libraries=places&callback=initAutocomplete" async defer></script>

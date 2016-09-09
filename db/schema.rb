@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905034205) do
+ActiveRecord::Schema.define(version: 20160908183440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,12 +28,20 @@ ActiveRecord::Schema.define(version: 20160905034205) do
   create_table "events", force: :cascade do |t|
     t.string   "temp_url"
     t.string   "permanent_url"
+    t.string   "place_id"
     t.integer  "drone_id"
     t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["drone_id"], name: "index_events_on_drone_id", using: :btree
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
+  end
+
+  create_table "events_friends", id: false, force: :cascade do |t|
+    t.integer "event_id",  null: false
+    t.integer "friend_id", null: false
+    t.index ["event_id"], name: "index_events_friends_on_event_id", using: :btree
+    t.index ["friend_id"], name: "index_events_friends_on_friend_id", using: :btree
   end
 
   create_table "friends", force: :cascade do |t|

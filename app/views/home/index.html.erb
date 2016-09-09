@@ -1,19 +1,18 @@
-<div id="top-bar">
-</div>
-
-<div id="main-content">
-  <div>
+<div id="main-content no-top">
+  <div id="logo-space">
     <div id="logo-image">
     </div>
     <div>
       <h1>Guardian</h1>
     </div>
   </div>
-  <div>
-    <%= link_to 'register', new_user_registration_path %>
-    <%= link_to 'login', new_user_session_path %>
-  </div>
+
 </div>
 
 <div id="bottom-bar">
+  <div class="bottom-menu">
+    <%= link_to 'register', new_user_registration_path %>
+    <div class="bottom-separator"></div>
+    <%= link_to 'login', new_user_session_path %>
+  </div>
 </div>

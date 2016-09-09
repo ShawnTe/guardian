@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
   belongs_to :drone
   belongs_to :user
-  belongs_to :friend
+  has_and_belongs_to_many :friends
 end
