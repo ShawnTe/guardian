@@ -13,6 +13,5 @@ Friend.create(first_name: "Javier", last_name: "Miller", user_id: 1, email: "e@b
 Drone.create(name: "Patricia", server_address: "http://172.16.50.232:8080/start", user_id: 1)
 
 4.times do
-
-  Event.create(temp_url: "http://guardian.pagekite.me", permanent_url: "http://guardian.pagekite.me", place_id: "633 Folsom St, San Francisco, CA", user_id: 1, drone_id: 1)
+  Event.create(temp_url: "http://guardian.pagekite.me", permanent_url: "http://guardian.pagekite.me", place_id: "633 Folsom St, San Francisco, CA", user_id: 1, drone_id: 1, event_status: "not connected")
 end

@@ -231,9 +231,18 @@ em {
 }
 
 #info p {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
   height: 6vh;
+  padding-left: 2vw;
 }
+
+#info p span{
+  font-size: .7em;
+}
+
 #video {
   display: flex;
   justify-content: center;
@@ -287,6 +296,17 @@ em {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 10vh;
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 1em;
+}
+
+.bottom-menu div input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 49vw;
   height: 10vh;
   text-decoration: none;
   color: var(--color-text-light);
@@ -405,6 +425,16 @@ em {
   color: var(--color-text-light);
 }
 
+.watch-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  font-size: .7em;
+  color: var(--color-text-light);
+}
+
 #help-not-connected {
   background-color: var(--color-text-dark);
 }
@@ -437,4 +467,8 @@ em {
 
 #show-events {
   display: none;
+}
+
+.success-message {
+  font-size: 3em;
 }

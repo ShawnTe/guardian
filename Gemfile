@@ -18,8 +18,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'twilio-ruby', '~> 4.11.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'twilio-ruby', '~> 4.11.1'
-
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'

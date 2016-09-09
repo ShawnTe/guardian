@@ -1,7 +1,9 @@
 <div id=top-bar>
+  
   <div class=help-status id=help-not-connected>
     No one watching...
   </div>
+  
 </div>
 
 <div id="main-content no-bottom">  
@@ -13,3 +15,30 @@
   </div>
 </div>
 
+<script>
+  var address = window.location.href;
+  var split_address = address.split('/');
+  var event_id = split_address[split_address.length-3];
+
+  function statusCheck() {
+    $.ajax({
+      url: "/events/"+event_id+"/status"
+    })
+    .done(function(serverResponse) {
+      console.log("success");
+      console.log(serverResponse.event_status);
+      if (serverResponse.event_status == "connected") {
+        $(".help-status").removeAttr("id", "help-not-connected");
+        $(".help-status").attr("id", "help-connected");
+        $(".help-status").html("Connected")
+        clearInterval(refreshElement);
+      }
+    })
+    .fail(function(serverResponse) {
+      console.log("fail")
+      console.log(serverResponse)
+    })
+  }
+
+  var refreshElement = setInterval(statusCheck, 5000);
+</script>

@@ -41,17 +41,20 @@
         <%= f.label :email %><br />
         <%= f.email_field :email %>
       </div>
-
+  </div>
+</div>
+  <div id="bottom-bar">
+  <div class=bottom-menu>
         <div class="actions">
           <%= f.submit "Save changes" %>
         </div>
+    <div class=bottom-separator></div>
+    <%= link_to 'Back', friends_path %>
+  </div>
+  </div>
+
+
 
     <% end %>
-  </div>
+
   <% end %>
-
-  <%= link_to 'Back', friends_path %>
-</div>
-
-<div id="bottom-bar">
-</div>

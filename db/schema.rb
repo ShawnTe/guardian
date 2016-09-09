@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160908183440) do
   create_table "events", force: :cascade do |t|
     t.string   "temp_url"
     t.string   "permanent_url"
+    t.string   "event_status"
     t.string   "place_id"
     t.integer  "drone_id"
     t.integer  "user_id"
