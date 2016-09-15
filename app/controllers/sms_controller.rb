@@ -11,7 +11,7 @@ class SmsController < ApplicationController
 	  	)
 	  	if client.messages.create(
 
-	    		to: "+13302070939",
+	    		to: "+16505495775",
 	    		from: @user.phone_number,
 	     		body: message
 	    	)
