@@ -6,7 +6,7 @@
   <div>
     <ul class=lists>
       <% @friends.each do |friend| %>
-      <li><%= link_to friend.first_name + friend.last_name,  friend_path(friend) %></li>
+      <li><%= link_to friend.first_name + " " + friend.last_name,  friend_path(friend) %></li>
       <%end%>
     </ul>
   </div>
