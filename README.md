@@ -25,7 +25,7 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Lands the drone
 * Ends video stream
 * Triggers change in friends view
-
+[[home-walk-address.jpg]]
 ##Team
 * Jason Lorentzen @codejlo
 * Shawn Tuttle @shawnte
