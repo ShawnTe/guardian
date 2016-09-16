@@ -1,8 +1,8 @@
 #Guardian
 An app that helps you get home safely.
 
-This was our final project at DevBootcamp. Using a combo of app + hardware, we used a Parrot AR.Drone 2.0 to monitor User's progress for short (up to 10 minute) walks. Future iteration would include the feature of a drone auto-following user.
-**Challenge:** The drone communicates to controller over wifi. We were unable, on such short timeframe, to figure out how to utilize both wifi (to connect with drone) as well as data (to connect with app server).
+This was our final project at DevBootcamp. Using a combo of app + hardware, we used a Parrot AR.Drone 2.0 to monitor User's progress for short (up to 10 minute) walks. Future iteration would include the feature of a drone auto-following user.  
+**Challenge:** The drone communicates to controller over wifi. We were unable, on such short timeframe, to figure out how to utilize both wifi (to connect with drone) as well as data (to connect with app server).  
 **Solution:** The app sent command to a second server which issued the commands for the drone to take-off, walk forward, and land (instead of communicating with the drone itself).
 
 ##Features
