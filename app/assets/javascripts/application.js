@@ -12,7 +12,6 @@ $(document).ready(function(){
        })
        .done(function(serverResponse){
          $('#pac-input').show()
-
          $('.location-input').removeAttr('id')
          $('.walk-me-home').removeAttr('id')
          $('.location-input').attr('id', 'shown-div')
@@ -22,38 +21,23 @@ $(document).ready(function(){
          console.log("Request to send text failed");
        })
 
-    $.ajax({
-      // Jason's server
-      url: "http://172.16.51.60:3000/start",
-      // Eric's server
-      // url: "http://172.16.50.232:8080/start",
-      crossDomain : true
-    })
-    .done(function(serverResponse){
-    })
-    .fail(function(serverResponse){
-      console.log("Request to start drone failed");
-    })
+    // Start drone. Inactive for now since there's no drone to start.
+    // $.ajax({
+    //   // Jason's server
+    //   url: "http://172.16.51.60:3000/start",
+    //   crossDomain : true
+    // })
+    // .done(function(serverResponse){
+    // })
+    // .fail(function(serverResponse){
+    //   console.log("Request to start drone failed");
+    // })
   })
 
   $("#home-safely").on("click", function(e){
-
     var address = window.location.href;
     var split_address = address.split('/');
     var event_id = split_address[split_address.length-3];
-
-
-    $.ajax({
-      // Jason's server
-      url: "http://172.16.51.60:3000/end",
-      // Eric's server
-      // url: "http://172.16.50.232:8080/end",
-      crossDomain : true
-    })
-    .fail(function(serverResponse){
-      console.log("Request failed");
-    });
-
     $.ajax({
       url: "/events/"+event_id,
       method: "put",
@@ -67,24 +51,39 @@ $(document).ready(function(){
       console.log(serverResponse);
     });
 
+    // Land drone. Inactive for now since there's no drone to land.
+    // $.ajax({
+    //   // Drone on Jason's server
+    //   url: "http://172.16.51.60:3000/end",
+    //   crossDomain : true
+    // })
+    // .fail(function(serverResponse){
+    //   console.log("Request failed");
+    // });
   });
 
   $("#walk-button").on("click", function(){
-    $.ajax({
-      // Jason's server
-      url: "http://172.16.51.60:3000/walk",
-      // Eric's server
-      // url: "http://172.16.50.232:8080/start",
-      crossDomain : true
-    })
-    .done(function(serverResponse){
-      console.log(serverResponse);
-      console.log("Request to walk drone success");
-    })
-    .fail(function(serverResponse){
-      console.log(serverResponse);
-      console.log("Request to walk drone failed");
-    })
+    $(".spinner").show();
+    setTimeout(hideSpinner, 2000);
+    function hideSpinner(){
+      $(".spinner").hide()
+    }
+
+
+    // Walk drone. Inactive for now since there's no drone to move along.
+    // $.ajax({
+    //   // Drone on Jason's server
+    //   url: "http://172.16.51.60:3000/walk",
+    //   crossDomain : true
+    // })
+    // .done(function(serverResponse){
+    //   console.log(serverResponse);
+    //   console.log("Request to walk drone success");
+    // })
+    // .fail(function(serverResponse){
+    //   console.log(serverResponse);
+    //   console.log("Request to walk drone failed");
+    // })
   })
 
 
