@@ -33,4 +33,4 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Eric Booker @ericbooker12
 
 ##My Role
-Rails backend, most of the js/ajax functionality, CRUD views, Devise setup
+Rails backend, most of the js/ajax functionality & majority of the CRUD views
