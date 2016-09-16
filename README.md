@@ -27,7 +27,6 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Triggers change in friends view
 
 ##Images
-![screenshots](/public/screenshots.jpg "screenshots")
 ![images](/home-walk-address.jpg "images") 
 ##Team
 * Jason Lorentzen @codejlo
