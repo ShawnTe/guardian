@@ -28,7 +28,7 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 
 ##Images
 ![screenshots](/public/screenshots.jpg "screenshots")
-![images](home-walk-address.jpg "images) 
+![images](/home-walk-address.jpg "images") 
 ##Team
 * Jason Lorentzen @codejlo
 * Shawn Tuttle @shawnte
