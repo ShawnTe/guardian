@@ -21,9 +21,9 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Friend clicks button across top of screen to indicate they're watching
 * User's phone is updated to say that their friend is watching  
 
-**Challenge:** How to have one server responding to both User and Friend's clients.  
+  **Challenge:** How to have one server responding to both User and Friend's clients.  
 
-**Solution:** Use setInterval function with a heartbeat to monitor change in event state.
+  **Solution:** Use setInterval function with a heartbeat to monitor change in event state.
 
 ####Push the Safe button upon arrival
 * Lands the drone
