@@ -7,6 +7,10 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 
 **Solution:** The app sent command to a second server which issued the commands for the drone to take-off, walk forward, and land (instead of communicating with the drone itself).
 
+##Images
+![/guardian-demo-placeholder.jpg](https://youtu.be/p9P8ZZC2AKo "demo link") 
+![images](/home-walk-address.jpg "images") 
+
 ##Features
 
 ####Push the Walk Me Home button
@@ -29,9 +33,6 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Lands the drone
 * Ends video stream
 * Triggers change in friends view
-
-##Images
-![images](/home-walk-address.jpg "images")   
 
 ##Team
 * Jason Lorentzen @codejlo
