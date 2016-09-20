@@ -8,11 +8,9 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 **Solution:** The app sent command to a second server which issued the commands for the drone to take-off, walk forward, and land (instead of communicating with the drone itself).
 
 ##Images
-[![demo](/guardian-demo.jpg)](https://youtu.be/p9P8ZZC2AKo)
-
+![images](/animated-gif.gif "images")
 
 ##Features
-![images](/home-walk-address.jpg "images") 
 
 ####Push the Walk Me Home button
 * Drone lifts off
