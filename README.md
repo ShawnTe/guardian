@@ -8,7 +8,7 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 **Solution:** The app sent command to a second server which issued the commands for the drone to take-off, walk forward, and land (instead of communicating with the drone itself).
 
 ##Images
-![images](/animated-gif.gif "images")
+![images](/animated.gif "images")
 
 ##Features
 
