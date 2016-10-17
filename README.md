@@ -1,5 +1,5 @@
 #Guardian
-An app that helps you get home safely.
+A mobile-first app that helps you get home safely.
 
 This was our final project at DevBootcamp. Using a combo of app + hardware, we used a Parrot AR.Drone 2.0 to monitor User's progress for short (up to 10 minute) walks. Future iteration would include the feature of a drone auto-following user. 
 
@@ -32,6 +32,12 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Lands the drone
 * Ends video stream
 * Triggers change in friends view
+
+## Tech stack
+* Ruby on Rails
+* Twilio API
+* Javascript / Ajax
+* 
 
 ##Team
 * Jason Lorentzen @codejlo
