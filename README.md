@@ -35,9 +35,10 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 
 ## Tech stack
 * Ruby on Rails
-* Twilio API
+* PostgreSQL
 * Javascript / Ajax
-* 
+* Twilio API
+* Google GeoLocation API
 
 ##Team
 * Jason Lorentzen @codejlo
