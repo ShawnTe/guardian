@@ -40,11 +40,14 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Twilio API
 * Google GeoLocation API
 
-##Team
-* Jason Lorentzen @codejlo
-* Shawn Tuttle @shawnte
-* Armon Arcuri @armoney
-* Eric Booker @ericbooker12
-
 ##My Role
 Rails backend, most of the js/ajax functionality & majority of the CRUD views
+
+##Team
+* Armon Arcuri @armoney
+* Eric Booker @ericbooker12
+* Jason Lorentzen @codejlo
+* Shawn Tuttle @shawnte
+
+
+
