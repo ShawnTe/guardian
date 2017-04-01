@@ -1,4 +1,4 @@
-#Guardian
+# Guardian
 A mobile-first app that helps you get home safely.
 
 This was our final project at DevBootcamp. Using a combo of app + hardware, we used a Parrot AR.Drone 2.0 to monitor User's progress for short (up to 10 minute) walks. Future iteration would include the feature of a drone auto-following user. 
@@ -7,28 +7,28 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 
 **Solution:** The app sent command to a second server which issued the commands for the drone to take-off, walk forward, and land (instead of communicating with the drone itself).
 
-##Images
+## Images
 ![images](/animated.gif "images")
 
-##Features
+## Features
 
-####Push the Walk Me Home button
+#### Push the Walk Me Home button
 * Drone lifts off
 * Drone begins video recording
 * Text message sends to friend with link to video stream
 
-####Enter location
+#### Enter location
 * Geolocation map is added to video stream page so that friend knows exactly where user is
 
-####Live connection communication
+#### Live connection communication
 * Friend clicks button across top of screen to indicate they're watching
 * User's phone is updated to say that their friend is watching  
 
-  **Challenge:** How to have one server responding to both User and Friend's clients.  
+  ** Challenge:** How to have one server responding to both User and Friend's clients.  
 
-  **Solution:** Use setInterval function with a heartbeat to monitor change in event state.
+  ** Solution:** Use setInterval function with a heartbeat to monitor change in event state.
 
-####Push the Safe button upon arrival
+#### Push the Safe button upon arrival
 * Lands the drone
 * Ends video stream
 * Triggers change in friends view
@@ -40,10 +40,10 @@ This was our final project at DevBootcamp. Using a combo of app + hardware, we u
 * Twilio API
 * Google GeoLocation API
 
-##My Role
+## My Role
 Rails backend, most of the js/ajax functionality & majority of the CRUD views
 
-##Team
+## Team
 * Armon Arcuri @armoney
 * Eric Booker @ericbooker12
 * Jason Lorentzen @codejlo
